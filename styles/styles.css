@@ -7,7 +7,9 @@ html
     --background-main-header: #0f120f;
     --background-content: #0f1114;
     --background-nav: #31373d;
+    --background-tank-field: #485058;
     --text-color: #bad0e7;
+    --link-color: #3391ff;
 }
 
 /* Main content */
@@ -26,7 +28,7 @@ article, body, div, footer, header, h1, h2, p, td, tr, table, ul, ol
 }
 a
 {
-    color:#3391ff;
+    color: var(--link-color);
 }
 body
 {
@@ -104,7 +106,9 @@ div.main-content nav ul
 }
 div.main-content nav article
 {
-    position: fixed;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
 }
 
 /* Social */
@@ -128,6 +132,32 @@ div.main-content nav article
     background-image: url("../images/icons/itch_icon.png");
 }
 
+/* Tank graphic */
+div.tank-graphic
+{
+    margin-top: 50px;
+    position: absolute;
+    display: none;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+}
+div.tank-graphic img
+{
+    image-rendering: pixelated;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+}
+div.tank-play-field
+{
+    height: 500px;
+    width: 100%;
+    background-color: var(--background-tank-field);
+    position: relative;
+}
+
 /* Media screen */
 @media only screen and (max-width: 799px)
 {
@@ -146,5 +176,9 @@ div.main-content nav article
         width: 100%;
         height: auto;
         float: none;
+    }
+    div.tank-graphic
+    {
+        display: none;
     }
 }
