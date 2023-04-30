@@ -131,6 +131,10 @@ div.main-content nav article
 {
     background-image: url("../images/icons/itch_icon.png");
 }
+.gitlab
+{
+    background-image: url("../images/icons/gitlab_icon.png");
+}
 
 /* Tank graphic */
 div.tank-graphic
