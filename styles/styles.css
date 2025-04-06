@@ -1,8 +1,7 @@
 @charset "uft-8";
 
 /* Color vars */
-html
-{
+html {
     --background: black;
     --background-main-header: #0f120f;
     --background-content: #0f1114;
@@ -13,107 +12,120 @@ html
 }
 
 /* Main content */
-html
-{
+html {
     color: var(--text-color);
     background-color: var(--background);
-    font-family: Ubuntu, Arial, Helvetica, sans-serif;
+    font-family: "Noto Sans Mono", Courier, monospace;
     font-size: 18px;
     min-height: 100%;
 }
-article, body, div, footer, header, h1, h2, p, td, tr, table, ul, ol
-{
+
+article,
+body,
+div,
+footer,
+header,
+h1,
+h2,
+p,
+td,
+tr,
+table,
+ul,
+ol {
     margin: 0;
     padding: 0;
 }
-a
-{
+
+a {
     color: var(--link-color);
 }
-body
-{
+
+body {
     max-width: 800px;
     display: grid;
     margin: 0 auto;
 }
-header.main-header
-{
+
+header#main-header {
     background-color: var(--background-main-header);
 }
-header.main-header h1
-{
+
+header#main-header h1 {
     font-size: 3em;
 }
-div.main-content
-{
+
+div#main-content {
     min-height: 100vh;
 }
-div.main-content div.header-body
-{
+
+div#main-content div.header-body {
     width: 70%;
     float: right;
     background-color: var(--background-content);
     height: 100%;
 }
-div.main-content nav
-{
+
+/* Banner */
+header {
+    text-align: center;
+}
+
+header#main-header h1 {
+    padding: 0.5em;
+}
+
+/* Article */
+article h1,
+article h2,
+article p,
+article img,
+article ul,
+article ol {
+    margin-bottom: 1em;
+}
+
+article h1 {
+    font-size: 2em;
+}
+
+article h2 {
+    font-size: 1.5em;
+}
+
+article img {
+    max-width: 100%;
+}
+
+article {
+    padding: 1em;
+}
+
+article ul,
+article ol {
+    margin-left: 1em;
+}
+
+/* Navigation */
+nav#main-nav {
     width: 30%;
     float: left;
     background-color: var(--background-nav);
     height: 100%;
 }
 
-/* Banner */
-header
-{
-    text-align: center;
-}
-header.main-header h1
-{
-    padding: 0.5em;
+nav#main-nav ul {
+    list-style-type: '- ';
 }
 
-/* Article */
-article h1, article h2, article p, article img, article ul, article ol
-{
-    margin-bottom: 1em;
-}
-article h1
-{
-    font-size: 2em;
-}
-article h2
-{
-    font-size: 1.5em;
-}
-article img
-{
-    max-width: 100%;
-}
-article
-{
-    padding: 1em;
-}
-article ul, article ol
-{
-    margin-left: 1em;
-}
-
-/* Nav */
-div.main-content nav ul
-{
-    list-style-type: none;
-}
-div.main-content nav article
-{
+nav#main-nav article {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
 }
 
 /* Social */
-.social
-{
+.social {
     display: inline-block;
     background-size: auto 100%;
     background-position: 50% 50%;
@@ -122,67 +134,39 @@ div.main-content nav article
     width: 20px;
     height: 20px;
 }
-.social img
-{
+
+.social img {
     width: 20px;
     height: 20px;
 }
-.itchio
-{
+
+.itchio {
     background-image: url("../images/icons/itch_icon.png");
 }
-.gitlab
-{
+
+.gitlab {
     background-image: url("../images/icons/gitlab_icon.png");
 }
 
-/* Tank graphic */
-div.tank-graphic
-{
-    margin-top: 50px;
-    position: absolute;
-    display: none;
-    width: 48px;
-    height: 48px;
-    padding: 0;
-    margin: 0;
-}
-div.tank-graphic img
-{
-    image-rendering: pixelated;
-    position: absolute;
-    padding: 0;
-    margin: 0;
-}
-div.tank-play-field
-{
-    height: 500px;
-    width: 100%;
-    background-color: var(--background-tank-field);
-    position: relative;
-}
-
 /* Media screen */
-@media only screen and (max-width: 799px)
-{
-    div.main-content nav
-    {
+@media only screen and (max-width: 799px) {
+    div#main-content nav {
         width: 100%;
         height: auto;
         float: none;
     }
-    div.main-content nav article
-    {
+
+    div#main-content nav article {
         position: relative;
     }
-    div.main-content div.header-body
-    {
+
+    div#main-content div.header-body {
         width: 100%;
         height: auto;
         float: none;
     }
-    div.tank-graphic
-    {
+
+    div.tank-graphic {
         display: none;
     }
 }
