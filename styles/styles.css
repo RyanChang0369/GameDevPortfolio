@@ -152,6 +152,27 @@ nav#main-nav article {
     background-image: url("../images/icons/github_icon.svg");
 }
 
+/* Float */
+.left50 {
+    width: 49%;
+    float: left;
+    display: block;
+}
+
+img.left50 {
+    padding-right: 1em;
+}
+
+.right50 {
+    width: 49%;
+    float: right;
+    display: block;
+}
+
+img.right50 {
+    padding-left: 1em;
+}
+
 /* Media screen */
 @media only screen and (max-width: 799px) {
     div#main-content nav {
@@ -172,5 +193,13 @@ nav#main-nav article {
 
     div.tank-graphic {
         display: none;
+    }
+
+    .left50 {
+        width: initial !important;
+    }
+    
+    .right50 {
+        width: initial !important;
     }
 }
